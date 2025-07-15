@@ -19,3 +19,4 @@ chroma_db/
 #TEST
 test_embed_store.py
 example.pdf
+docs/
