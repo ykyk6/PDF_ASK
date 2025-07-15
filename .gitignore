@@ -1,0 +1,17 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# 環境變數
+.env
+
+# 前端
+node_modules/
+build/
+dist/
+
+# ChromaDB
+chroma_db/
