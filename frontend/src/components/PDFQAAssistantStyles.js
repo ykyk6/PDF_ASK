@@ -173,7 +173,7 @@ export const StatusCircle = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
   background: linear-gradient(to right, #ea580c, #dc2626);
   -webkit-background-clip: text;
