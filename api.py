@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from vector_store import embed_and_store, load_chroma
 from pdf_utils import read_pdf, split_text
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 import hashlib

@@ -1,6 +1,6 @@
 from typing import List
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
 
 
 def embed_and_store(chunks: List[str], persist_directory: str = "chroma_db") -> Chroma:
