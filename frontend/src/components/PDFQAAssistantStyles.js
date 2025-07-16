@@ -178,20 +178,30 @@ export const Title = styled.h1`
   background: linear-gradient(to right, #ea580c, #dc2626);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+  @media (max-width: 950px) {
+    font-size: 1.9rem;
+  }
 `;
 
 export const SubTitle = styled.p`
   color: #52525b;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  @media (max-width: 950px) {
+    font-size: 14px;
+  }
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -203,19 +213,22 @@ export const Card = styled.div`
   );
   backdrop-filter: blur(4px);
   border-radius: 1.5rem;
-  padding: 1.5rem;
+  padding: 10px 1.2rem 1.1rem 1.2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #1e293b;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  @media (max-width: 950px) {
+    font-size: 0.95rem;
+  }
 `;
 
 export const UploadArea = styled.div`
@@ -323,14 +336,14 @@ export const Bubble = styled.div`
 
 export const ChatInputArea = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem;
+  padding: 1.1rem;
   display: flex;
   gap: 0.75rem;
 `;
 
 export const ChatInput = styled.input`
   flex: 1;
-  padding: 0.5rem 1rem;
+  padding: 16px 1rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid #e5e7eb;
