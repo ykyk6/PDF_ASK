@@ -336,7 +336,7 @@ export const Bubble = styled.div`
 
 export const ChatInputArea = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1.1rem;
+  padding: 1rem;
   display: flex;
   gap: 0.75rem;
 `;
@@ -356,7 +356,7 @@ export const ChatInput = styled.input`
 `;
 
 export const SendButton = styled.button`
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   background: linear-gradient(to right, #fb923c, #f87171);
   color: #fff;
   border-radius: 1rem;

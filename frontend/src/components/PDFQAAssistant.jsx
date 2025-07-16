@@ -236,7 +236,7 @@ const PDFQAAssistant = () => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder={isReady ? 'ご質問を入力してください...' : 'まずPDFファイルをアップロードしてください'}
+              placeholder={isReady ? 'ご質問を入力してください...' : 'PDFファイルをアップロードしてください'}
               disabled={!isReady || isSending}
             />
             <SendButton
