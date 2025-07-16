@@ -22,6 +22,8 @@ const PDFQAAssistant = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleFileUpload = async (event) => {
     const uploadedFile = event.target.files[0];
     if (uploadedFile && uploadedFile.type === 'application/pdf') {
@@ -31,7 +33,7 @@ const PDFQAAssistant = () => {
       const formData = new FormData();
       formData.append('file', uploadedFile);
       try {
-        const response = await axios.post('http://localhost:8000/upload', formData, {
+        const response = await axios.post(`${apiUrl}/upload`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
         setIsProcessing(false);
@@ -57,7 +59,7 @@ const PDFQAAssistant = () => {
     setInputMessage('');
     setIsSending(true);
     try {
-      const response = await axios.post('http://localhost:8000/ask', {
+      const response = await axios.post(`${apiUrl}/ask`, {
         question: userMessage
       });
       const aiResponse = response.data.answer;
