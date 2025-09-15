@@ -56,11 +56,10 @@ def ask_pdf(data: QARequest):
     context = "\n".join([doc.page_content for doc in docs])
     llm = OpenAI(temperature=0)
     prompt = (
-        "あなたはプロのドキュメントアシスタントです。以下のPDF内容に基づいて、"
-        "内容のみを使って質問に答えてください。想像で補足しないでください。\n"
+        "以下のPDF内容に基づいて、内容のみを使って質問に答えてください。想像で補足しないでください。"
         f"{context}\n\n"
         f"質問：{question}\n"
-        "箇条書きまたは要約で答えてください："
+        "指示に従って直接答えてください。箇条書きや要約はせず、指示の再述や前後の説明も加えず、最終的な答えだけを出力してください。"
     )
     answer = llm(prompt)
     return {"answer": answer, "context": context} 
