@@ -60,7 +60,6 @@ def ask_pdf(data: QARequest):
         "内容のみを使って質問に答えてください。想像で補足しないでください。\n"
         f"{context}\n\n"
         f"質問：{question}\n"
-        "指示に従って直接答えてください。箇条書きや要約はせず、指示の再述や前後の説明も加えず、最終的な答えだけを出力してください。"
     )
     answer = llm(prompt)
     return {"answer": answer, "context": context} 
